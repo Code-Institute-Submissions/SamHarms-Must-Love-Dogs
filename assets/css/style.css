@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Bubblegum+Sans&family=Roboto:wght@400;500&display=swap');
+
 body {
-    background-image: url("../images/dog-background.jpg");
+    background-image: url("../images/dogs-background-image.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -8,10 +10,17 @@ body {
 
 *{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Baloo 2", sans-serif;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: 10rem;
+    color: white;
 }
 
 #home {
@@ -49,7 +58,7 @@ body {
     padding: 3rem
 }
 
-.conatiner > * {
+.container > * {
     width: 100%;
 }
 
