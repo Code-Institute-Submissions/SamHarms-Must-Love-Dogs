@@ -48,3 +48,27 @@
 .incorrect {
     background: linear-gradient(32deg, rgb(221, 87, 87) 0%, rgb(233, 107, 107) 100%);  
 }
+
+#hud {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hud-item{
+    display: flex;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  font-size: 3rem;
+  border: 0.2rem solid black;
+  border-radius: 20px;
+  background-color: white;    
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
