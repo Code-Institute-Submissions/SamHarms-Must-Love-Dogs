@@ -41,3 +41,10 @@
 }
 
 /* ---- Correct/Incorrect answer colours ---- */
+.correct {
+    background: linear-gradient(32deg, rgb(131, 207, 140) 0%, rgb(143, 221, 172) 100%); 
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgb(221, 87, 87) 0%, rgb(233, 107, 107) 100%);  
+}
