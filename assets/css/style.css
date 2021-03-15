@@ -18,9 +18,11 @@ body {
 
 h1 {
     text-align: center;
-    padding: 10px;
-    font-size: 10rem;
+    padding: 15px;
+    font-size: 15rem;
     color: white;
+    -webkit-text-stroke: 4px black; 
+     text-shadow: 2px 2px 5px rgba(196, 123, 165, 1);
 }
 
 #home {
