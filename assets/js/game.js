@@ -2,6 +2,7 @@ const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
+const quizContainer = document.getElementById("quiz-container");
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -12,83 +13,103 @@ let availableQuestions = [];
 let questions = [
     {
         question: 'Placeholder question 1',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
         answer: 4,
     },
     {
         question: 'Placeholder question 2',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
+        choices: [
+            { description: 'choice 1' },
+            { description: 'choice 2' },
+            { description: 'choice 3' },
+            { description: 'choice 4' },
+        ],
         answer: 3,
     },
-    {
+     {
         question: 'Placeholder question 3',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
         answer: 1,
     },
-    {
+     {
         question: 'Placeholder question 4',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
+        answer: 2,
+    },
+     {
+        question: 'Placeholder question 5',
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
         answer: 4,
     },
-    {
-        question: 'Placeholder question 5',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
-        answer: 2,
-    },
-    {
+     {
         question: 'Placeholder question 6',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
-        answer: 3,
-    },
-    {
-        question: 'Placeholder question 7',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
         answer: 1,
     },
-    {
-        question: 'Placeholder question 8',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
-        answer: 2,
+     {
+        question: 'Placeholder question 7',
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
+        answer: 3,
     },
-    {
+     {
+        question: 'Placeholder question 8',
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
+        answer: 1,
+    },
+     {
         question: 'Placeholder question 9',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
-        answer: 2,
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
+        answer: 3,
     },
     {
         question: 'Placeholder question 10',
-        choice1: 'choice 1',
-        choice2: 'choice 2',
-        choice3: 'choice 3',
-        choice4: 'choice 4',
-        answer: 4,
+        choices: [
+            { description: 'choice2 1' },
+            { description: 'choice2 2' },
+            { description: 'choice2 3' },
+            { description: 'choice2 4' },
+        ],
+        answer: 2,
     },
 ];
 
@@ -126,7 +147,27 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+const renderChoice = (choice, index) => {
+    return `
+        <div class="choice-container">
+          <p class="choice-prefix">${String.fromCharCode(65 + index)}</p>
+          <p class="choice-text" data-number="1">${choice.description}</p>
+        </div>
+    `;
+}    
+
+const renderQuestion = (question) => {
+    let output = `<h2 id="question">${question.question}?</h2>`;
+    question.choices.forEach((choice, index) => {
+        output += renderChoice(choice, index);
+    });
+    return output;
+}
+
+
 choices.forEach(choice => {
+  quizContainer.innerHTML = renderQuestion(questions[0]);
+
   choice.addEventListener("click", e => {
     if (!acceptingAnswers) return;
 
