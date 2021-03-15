@@ -1,0 +1,16 @@
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+  
+}
+
+.high-score {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 500px;
+  text-align: center;
+  background: #ffffff;
+}
