@@ -25,6 +25,8 @@ h1 {
      text-shadow: 2px 2px 5px rgba(196, 123, 165, 1);
 }
 
+
+
 #home {
     color: #000000;
     background-color: #ffffff;
@@ -111,6 +113,16 @@ h1 {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+p { text-align: center;
+    padding: 15px;
+    font-size: 3rem;
+    color: black;
+    background: white;
+     border: 2px solid black;
+     border-radius: 20px;
+
 }
 /* ---- FORMS ---- */
 form {
