@@ -97,6 +97,7 @@ h1 {
 
 .btn{
     display: block;
+    margin: auto;
     font-size: 2.4rem;
     padding: 2rem 0;
     width: 30rem;
