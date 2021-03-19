@@ -14,3 +14,9 @@
   text-align: center;
   background: #ffffff;
 }
+
+@media (max-width:767px){
+    .high-score{
+    width: 300px;
+}
+}

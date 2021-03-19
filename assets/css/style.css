@@ -25,7 +25,12 @@ h1 {
      text-shadow: 2px 2px 5px rgba(196, 123, 165, 1);
 }
 
-
+@media (max-width:767px){
+    h1{
+    font-size: 7rem;
+    -webkit-text-stroke: 3px black;
+}
+}
 
 #home {
     color: #000000;
@@ -140,6 +145,3 @@ input {
   border-radius: 20px;
   border: 0.2rem solid black;
 }
-
-
-
