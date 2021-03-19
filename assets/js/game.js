@@ -1,4 +1,3 @@
-  
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const questionCounterText = document.getElementById("questionCounter");
@@ -97,14 +96,14 @@ let questions = [
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 
-startGame = () => {
+const startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
 };
 
-getNewQuestion = () => {
+const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
         //go to the end page
@@ -128,31 +127,31 @@ getNewQuestion = () => {
 };
 
 choices.forEach(choice => {
-  choice.addEventListener("click", e => {
-    if (!acceptingAnswers) return;
+    choice.addEventListener("click", e => {
+        if (!acceptingAnswers) return;
 
-    acceptingAnswers = false;
-    const selectedChoice = e.target;
-    const selectedAnswer = selectedChoice.dataset["number"];
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
 
-    const classToApply =
-      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+        const classToApply =
+            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
-    if (classToApply === "correct") {
-      incrementScore(CORRECT_BONUS);
-    }
+        if (classToApply === "correct") {
+            incrementScore(CORRECT_BONUS);
+        }
 
-    selectedChoice.parentElement.classList.add(classToApply);
+        selectedChoice.parentElement.classList.add(classToApply);
 
-    setTimeout(() => {
-      selectedChoice.parentElement.classList.remove(classToApply);
-      getNewQuestion();
-    }, 1000);
-  });
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);
+    });
 });
 
-incrementScore = num => {
-  score += num;
-  scoreText.innerText = score;
+const incrementScore = (num) => {
+    score += num;
+    scoreText.innerText = score;
 };
 startGame(); 
