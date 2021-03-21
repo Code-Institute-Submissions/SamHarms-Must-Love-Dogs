@@ -33,5 +33,5 @@ const score = {
     highScores.splice(6);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    /* window.location.assign('/'); */
+    window.location.assign('highscores.html'); 
 };
