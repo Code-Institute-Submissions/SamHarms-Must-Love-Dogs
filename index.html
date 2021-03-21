@@ -16,8 +16,8 @@
         type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Must Love Dogs</title>
-    <link rel="shortcut icon" type="image/jpg" href="assets/images/paw-print-favicon.png"/>
-   
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/paw-print-favicon.png" />
+
 </head>
 
 <body>
@@ -29,8 +29,41 @@
             <p>Must Love Dogs is a quiz designed to test your knowledge of man's best friend.</p>
             <a href="game.html" class="btn">Play Now! <i class="fa fa-paw"></i></a>
             <a href="highscores.html" class="btn" id="highscore-btn">Highscores <i class="fa fa-trophy"></i></a>
+
+            <!-- How to play Modal-->
+            <button type="button" class="btn" data-toggle="modal" data-target="#rulesModal">
+                How to Play
+            </button>
+
+            <div class="modal fade" id="rulesModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="rulesModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="rulesModalLabel">How to play</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li>The aim of the game is to score the highest points</li>
+                                <li>To begin click play now</li>                              
+                                <li>Answer the questions one by one</li>                              
+                                <li>If an answer is correct your chosen answer will turn <span class= "correct-answer">green</span> , if it is incorrect it will turn <span class= "incorrect-answer">red</span></li>                                
+                                <li>When you have completed the quiz save your score</li>                               
+                                <li>To see how you compate to other users check out our highscores page</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 
     <!-- JavaScript files -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
