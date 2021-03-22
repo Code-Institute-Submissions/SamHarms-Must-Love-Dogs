@@ -17,10 +17,11 @@ function sendMail(newsletterSignup) {
     })
     .then(
         function(response) {
+            $('#msgModal').modal('show');
             console.log("SUCCESS", response);
         },
         function(error) {
-            console.log("FAILED", error);
+            console.error("FAILED", error);
         }
     );
     return false;  

@@ -1,8 +1,8 @@
 # Must Love Dogs 
 
-[View the live project [here](https://samharms.github.io/Must-Love-Dogs/)
+View the live project [here](https://samharms.github.io/Must-Love-Dogs/)
 
-This website was created to demonstrate my front-end skills including HTML, CSS and JavaScript, for Milestone Project 2 of Code Institute’s Full Stack Developer course. The purpose of the project was to create a static website. xxxx
+This website was created to demonstrate my front-end skills including HTML, CSS and JavaScript, for Milestone Project 2 of Code Institute’s Full Stack Developer course. The purpose of the project was to create a static website.
 
 ![website mockup image](assets/images/readme-images/multi-device-website-mockup.png)
 
@@ -45,6 +45,7 @@ This website was created to demonstrate my front-end skills including HTML, CSS 
 
 
 - Landing Page Wireframe [Here](https://github.com/SamHarms/Must-love-dogs/blob/master/assets/images/readme-images/landing-page.png) 
+
 - Question Page Wireframe [Here](https://github.com/SamHarms/Must-love-dogs/blob/master/assets/images/readme-images/quiz-page.png)
 
 - End Page Wireframe [Here](https://github.com/SamHarms/Must-love-dogs/blob/master/assets/images/readme-images/end-page.png)
@@ -65,9 +66,9 @@ This website was created to demonstrate my front-end skills including HTML, CSS 
 
 - The question page includes question and score counters which show the number of questions answered and the score so far.
 
--	At the end of the quiz users have the option to save your score.
+- At the end of the quiz users have the option to save your score.
 
--	Highscores page displays the top six scores.
+- Highscores page displays the top six scores.
 
 - Newsletter form which provides a form for users to sign up to a newsletter to be notified of new quizzes.
 
@@ -85,8 +86,6 @@ Quiz sites have endless possibilities of new features that could be added. Some 
 - Different messages are currently displayed based on the users score. I would like to add images to match these messages.
 
 -	Different topics to choose from. For example “breeds”, “famous dogs” etc.
-
-
 
 ## Technologies Used
 
@@ -135,10 +134,6 @@ Quiz sites have endless possibilities of new features that could be added. Some 
 
 - [FreeFavicon](https://www.freefavicon.com/)
   - The paw print favicon was downloaded from Free Favicon.
-
-
-
-
 
 ## Testing
 
@@ -279,7 +274,7 @@ The Lighthouse function on Google Chrome Developer Tools was used to check the p
      
  ![about](assets/images/readme-images/about.png)
 
-    2. The rules modal also includes details of how the site works.
+ 2.  The rules modal also includes details of how the site works.
 
 2.	I want to be able to navigate the site easily with the minimum number of clicks to get to the desired information.
 
@@ -296,7 +291,7 @@ The Lighthouse function on Google Chrome Developer Tools was used to check the p
 
   1.	The modal on the home page displays the rules to users.
 
-  ![rules](assets/images/readme-images/rules.png)
+    ![rules](assets/images/readme-images/rules.png)
 
 
 4.	I want to be able to play a game that is fun and easy to understand.
