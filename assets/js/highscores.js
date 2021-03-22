@@ -7,3 +7,21 @@ highScoresList.innerHTML = highScores
   })
   .join("");
   
+  /* ----- EmailJs Newsletter sign up ----- */
+
+function sendMail(newsletterSignup) {
+    emailjs.send("service_c5ljukn", "template_a4yyv0p", {
+        "from_name": newsletterSignup.name.value,
+        "from_email": newsletterSignup.email.value,
+    })
+    .then(
+        function(response) {
+            console.log("SUCCESS", response);
+        },
+        function(error) {
+            console.log("FAILED", error);
+        }
+    );
+    return false;  // To block from loading a new page
+}
+
