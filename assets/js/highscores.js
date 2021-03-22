@@ -1,6 +1,7 @@
 const highScoresList = document.getElementById("highScoresList");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
+/* Add score to highscores list*/
 highScoresList.innerHTML = highScores
   .map(score => {
     return `<li class="high-score">${score.name} - ${score.score}</li>`;
@@ -22,6 +23,6 @@ function sendMail(newsletterSignup) {
             console.log("FAILED", error);
         }
     );
-    return false;  // To block from loading a new page
+    return false;  
 }
 

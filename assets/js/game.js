@@ -1,14 +1,15 @@
+/*General variables*/
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
-
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+/* Questions and answer choices*/
 let questions = [
     {
         question: 'What was the name of the first dog to go to space in 1957?',
@@ -51,7 +52,7 @@ let questions = [
         answer: 2,
     },
     {
-        question: 'The Guinness World Record for holding the most tennis balls in a dogs mouth went to Finley Molloy in 2020. How many could he hold?',
+        question: 'What is the Guinness World Record for the most tennis balls held in a dogs mouth at one time?',
         choice1: '3',
         choice2: '8',
         choice3: '6',
@@ -96,6 +97,7 @@ let questions = [
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 
+/* Start game */
 const startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -103,15 +105,16 @@ const startGame = () => {
     getNewQuestion();
 };
 
+/* If all questions have been answered get score*/
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
-        //go to the end page
+        /*go to the end page when all questions have been answered*/
         return window.location.assign('end.html');
     }
     questionCounter++;
+    /*show number of questions answered out of total*/
     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
-
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -126,6 +129,7 @@ const getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+/* On click add colour based on whether chosen answer is correct or incorrect*/
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if (!acceptingAnswers) return;
@@ -136,13 +140,13 @@ choices.forEach(choice => {
 
         const classToApply =
             selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-
+/* Add points to score if correct answer choosen*/
         if (classToApply === "correct") {
             incrementScore(CORRECT_BONUS);
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
-
+/*Add short delay before moving to next question*/
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();

@@ -51,6 +51,7 @@
     background: linear-gradient(32deg, rgb(221, 87, 87) 0%, rgb(233, 107, 107) 100%);  
 }
 
+/* ---- Question and score counter styling ---- */
 #hud {
   display: flex;
   justify-content: space-around;
