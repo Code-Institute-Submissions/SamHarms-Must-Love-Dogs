@@ -23,11 +23,13 @@
   background-color: white;
 }
 
+@media(hover: hover) and (pointer: fine) {
 .choice-container:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 rgba(162, 125, 172, 1);
   transform: scale(1.02);
   transition: transform 150ms;
+}
 }
 
 .choice-prefix {
