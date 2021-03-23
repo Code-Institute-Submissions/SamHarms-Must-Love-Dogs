@@ -4,9 +4,9 @@ body {
     background-image: url("../images/dogs-background-image.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    
+    background-size: cover;   
 }
+
 /* ---- Styles applied to entire site ---- */
 
 *{
@@ -44,22 +44,22 @@ body {
 
 /* ---- H1 styling ---- */
 h1 {
-    position: sticky;
     text-align: center;
-    margin: auto;
-    padding: 10px;
+    padding: 15px;
     font-size: 15rem;
     color: white;
     -webkit-text-stroke: 4px black; 
     text-shadow: 2px 2px 5px rgba(196, 123, 165, 1);
+    padding-top: 300px;
 }
 
 @media (max-width:767px){
     h1{
     font-size: 7rem;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 3px black;   
+ }
 }
-}
+
  /* --- Container styling for all pages ---- */
 .container {
     width: 100vw;

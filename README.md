@@ -171,7 +171,7 @@ Quiz sites have endless possibilities of new features that could be added. Some 
 
    ![question counter](assets/images/readme-images/question-counter.png)
 
- -	Does the score increase after a correctly answered question? Yes
+  - Does the score increase after a correctly answered question? Yes
 
     ![score counter](assets/images/readme-images/score-counter.png)
 
@@ -197,7 +197,7 @@ Quiz sites have endless possibilities of new features that could be added. Some 
 
    - When a user saves their score are they redirected to the highscores page? Yes
 
--	When on the highscores page are usernames and scores displayed as a list? Yes
+   - When on the highscores page are usernames and scores displayed as a list? Yes
 
     ![high scores](assets/images/readme-images/highscores-list.png)
 
@@ -209,7 +209,7 @@ Quiz sites have endless possibilities of new features that could be added. Some 
 
    ![Signup requirements](assets/images/readme-images/signup-name-required.png)
 
-   -	Is the user notified when too few/too many characters are used? Yes
+   - Is the user notified when too few/too many characters are used? Yes
 
    ![Signup min length](assets/images/readme-images/signup-minlength.png)
 
@@ -279,11 +279,12 @@ The Lighthouse function on Google Chrome Developer Tools was used to check the p
 
 1.	As a user, I want to easily understand the purpose of the website.
 
-       1. The homepage includes a short description of what the site is about.
+       1. The rules modal includes details of how the site works.
+       
+       2. The homepage includes a short description of what the site is about.
      
- ![about](assets/images/readme-images/about.png)
+  ![about](assets/images/readme-images/about.png)
 
-       2. The rules modal also includes details of how the site works.
 
 2.	I want to be able to navigate the site easily with the minimum number of clicks to get to the desired information.
 
@@ -291,9 +292,7 @@ The Lighthouse function on Google Chrome Developer Tools was used to check the p
        
        2.  The buttons on the home page are clearly identified and bring users to exactly where they want to go.
 
-  ![navigation](assets/images/readme-images/navigation.png)
-
-   
+  ![navigation](assets/images/readme-images/navigation.png)  
 
 3.	I want to easily access the rules of the game.
 
@@ -307,13 +306,11 @@ The Lighthouse function on Google Chrome Developer Tools was used to check the p
 
 ![questions](assets/images/readme-images/questions.png)
 
-
 5.	I want to be able to save my score.
   
      1.  When a user completes the quiz they are taken to a page where they can add their user name and save their score.
 
     ![save score](assets/images/readme-images/score-submit.png)
-
 
 6. I want to be able to see high scores of other players.
 
@@ -322,7 +319,6 @@ The Lighthouse function on Google Chrome Developer Tools was used to check the p
     ![highscores](assets/images/readme-images/highscores-list.png)
 
     2.   Users can also access the list of highscores from the main page by clicking the “highscores” button
-
 
 7.	I want to be able to sign up to be notified of new quizzes or questions.
 
@@ -335,13 +331,15 @@ The Lighthouse function on Google Chrome Developer Tools was used to check the p
 
 - When the site was pushed to GitHub the quiz and high scores pages were not showing. My mentor advised that this was simply because I had index.html linking to /game.html and /highscores.html rather than game.html and highscores.html.  
 
--	On touchscreen devices the hover effect that shows when a user chooses an answer was sticking on the next question. In order to fix this I added the “@media(hover: hover) and (pointer: fine” style as explained on [This]( https://medium.com/@mezoistvan/finally-a-css-only-solution-to-hover-on-touchscreens-c498af39c31c) site which solved the issue.
+-	On touchscreen devices the hover effect that shows when a user chooses an answer was sticking on the next question. In order to fix this I added the “@media(hover: hover) and (pointer: fine)” style as explained on [This]( https://medium.com/@mezoistvan/finally-a-css-only-solution-to-hover-on-touchscreens-c498af39c31c) site which solved the issue.
 
 -	When I initially added the modal it was not displaying. [This]( https://stackoverflow.com/questions/17142790/bootstrap-modal-not-working-at-all/47235954) post from StackOverflow helped to solve the issue. 
 
+-   The h1 element on the highscores.html page was not displaying properly. This was fixed by increasing "padding-top".
+
 ### Known Bugs
 
-- On some mobile screen the h1 on highscores.html is not visible.
+- On some older mobile devices the top of h1 on highscores.html is not visible.
 
 - The highscores list only saves on the device/browser you are using. When friends tested their scores saved and they could see them in the list but I couldn't see theirs.
 

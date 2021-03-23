@@ -2,8 +2,7 @@
 #highScoresList {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 4rem;
-  
+  margin-bottom: 4rem;  
 }
 
 .high-score {
@@ -21,6 +20,7 @@
     width: 300px;
 }
 }
+
 
 /* ----- Newsletter Signup ----- */
 
