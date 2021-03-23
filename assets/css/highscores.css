@@ -56,7 +56,13 @@ h2 {
     width: 300px;
   }
 }
-
-#newsletterModal {
-    text-align: center;
+ /*---- Modal ----*/
+.modal-body {
+  font-size: 3.5rem;
+  margin: 0 0 3px 0;
+  padding: 5px 0;
+  width: 100%;
+  text-align: center ;
+  background: #ffffff;
+  min-height: 300px;
 }

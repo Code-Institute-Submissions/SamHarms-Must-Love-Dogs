@@ -140,13 +140,13 @@ choices.forEach(choice => {
 
         const classToApply =
             selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-/* Add points to score if correct answer choosen*/
+        /* Add points to score if correct answer choosen*/
         if (classToApply === "correct") {
             incrementScore(CORRECT_BONUS);
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
-/*Add short delay before moving to next question*/
+        /*Add short delay before moving to next question*/
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
